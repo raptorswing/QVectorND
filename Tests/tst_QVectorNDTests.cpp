@@ -42,6 +42,13 @@ void QVectorNDTests::QListConstructor()
 }
 
 //private test slot
+void QVectorNDTests::manhattanDistance()
+{
+    QVectorND toTest(QPointF(-10,10));
+    QVERIFY(toTest.manhattanDistance() == 20);
+}
+
+//private test slot
 void QVectorNDTests::lengthSquaredBenchmark()
 {
     const int count = 50;

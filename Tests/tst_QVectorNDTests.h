@@ -14,6 +14,7 @@ public:
 private Q_SLOTS:
     void generalConstructor();
     void QListConstructor();
+    void manhattanDistance();
     void lengthSquaredBenchmark();
 
     static qreal _randomFloat();
