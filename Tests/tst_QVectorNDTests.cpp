@@ -41,6 +41,22 @@ void QVectorNDTests::QListConstructor()
     QVERIFY(toTest.dimension() == count);
 }
 
+//private test slot
+void QVectorNDTests::lengthSquaredBenchmark()
+{
+    const int count = 50;
+
+    QBENCHMARK
+    {
+        QList<qreal> goods;
+        for (int i = 0; i < count; i++)
+            goods.append(_randomFloat());
+
+        const QVectorND toTest(goods);
+        toTest.lengthSquared();
+    }
+}
+
 //private static
 qreal QVectorNDTests::_randomFloat()
 {
